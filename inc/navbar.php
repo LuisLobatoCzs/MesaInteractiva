@@ -32,7 +32,7 @@
             <div class="col-xs-8">
                 <div class="contenedor-tabla pull-right">
                     <div class="contenedor-tr">
-                        <a href="#" onclick="compara();" class="table-cell-td">Comparar</a>
+                        <a href="#" onclick="compara();" class="table-cell-td"></a>
                     
                         <a href="#" onclick="Usuario1();" class="table-cell-td">Usuario 1</a>
                         <a href="#" onclick="Usuario2();" class="table-cell-td">Usuario 2</a>

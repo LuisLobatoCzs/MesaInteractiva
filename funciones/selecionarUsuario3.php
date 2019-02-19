@@ -3,7 +3,7 @@
  include '../library/consulSQL.php';
  sleep(4);
 
- $actual=ejecutarSQL::consultar("update usuarioactual set numUsuario=1 where 3");
+ $actual=ejecutarSQL::consultar("update usuarioactual set numUsuario=3 where 1");
 
 $status=ejecutarSQL::consultar("select status from usuarios where id=3");
 $row = mysql_fetch_row($status);
