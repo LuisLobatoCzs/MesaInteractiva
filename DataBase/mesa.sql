@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 17-02-2019 a las 23:34:20
+-- Tiempo de generación: 19-02-2019 a las 07:51:29
 -- Versión del servidor: 5.5.24-log
 -- Versión de PHP: 5.4.3
 
@@ -56,15 +56,16 @@ INSERT INTO `celular` (`id`, `modelo`, `conectividad`, `camara`, `sistema`, `com
 
 CREATE TABLE IF NOT EXISTS `usuarioactual` (
   `numUsuario` int(11) NOT NULL,
-  `compara` tinyint(1) NOT NULL
+  `compara` tinyint(1) NOT NULL,
+  `categoria` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarioactual`
 --
 
-INSERT INTO `usuarioactual` (`numUsuario`, `compara`) VALUES
-(0, 0);
+INSERT INTO `usuarioactual` (`numUsuario`, `compara`, `categoria`) VALUES
+(0, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -76,18 +77,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `celular1` int(11) DEFAULT NULL,
-  `celular2` int(11) DEFAULT NULL
+  `celular2` int(11) DEFAULT NULL,
+  `categoria` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `status`, `celular1`, `celular2`) VALUES
-(1, 0, NULL, NULL),
-(2, 0, NULL, NULL),
-(3, 0, NULL, NULL),
-(4, 0, NULL, NULL);
+INSERT INTO `usuarios` (`id`, `status`, `celular1`, `celular2`, `categoria`) VALUES
+(1, 0, NULL, NULL, NULL),
+(2, 0, NULL, NULL, NULL),
+(3, 0, NULL, NULL, NULL),
+(4, 0, NULL, NULL, NULL);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
